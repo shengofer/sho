@@ -1,0 +1,14 @@
+---
+extends: 'airbnb'
+env:
+  node: true
+rules:
+  consistent-return: 0
+  indent: ['error', 4]
+  no-plusplus: ["error", { "allowForLoopAfterthoughts": true }]
+  no-param-reassign: ["error", { "props": false }]
+  arrow-parens: ["error", "always"]
+  linebreak-style: 0
+  require-jsdoc: 2
+  valid-jsdoc: 2
+

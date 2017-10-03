@@ -1,0 +1,30 @@
+{
+  "name": "sho",
+  "version": "0.0.1",
+  "description": "sho(Shuffle object) - Javascript  helper library.",
+  "main": "sho.js",
+  "respository": "https://github.com/shengofer/sho",
+  "license": "",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "15.0.1",
+    "eslint-plugin-import": "2.6.0",
+    "eslint-watch": "3.1.2",
+    "istanbul": "0.4.5",
+    "mocha": "3.2.0",
+    "pre-commit": "1.2.2",
+    "sinon": "2.3.6",
+    "sinon-chai": "2.9.0"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "lint": "eslint ./src/**/*.js ./test/**/*.js",
+    "lint:watch": "esw -w ./src/**/*.js ./test/**/*.js ./config/**/*.js package.json; exit 0;",
+    "test": "istanbul --config=test/.istanbul.yml cover --include-all-sources node_modules/mocha/bin/_mocha --opts=./test/mocha.opts",
+    "test:watch": ".\\node_modules\\.bin\\mocha --opts=./test/mocha.opts --watch"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}

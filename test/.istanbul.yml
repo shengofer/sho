@@ -1,0 +1,25 @@
+reporting:
+  dir: ./env/coverage
+  print: summary
+  reports:
+    - lcov
+  watermarks:
+    statements: [75, 90]
+    lines: [75, 90]
+    branches: [50, 80]
+    functions: [75, 80]
+instrumentation:
+  default-excludes: true
+  extensions: ['.js']
+  excludes: ['config/**']
+check:
+  global:
+    statements: 90
+    lines: 90
+    branches: 80
+    functions: 90
+  each:
+    statements: 75
+    lines: 75
+    branches: 50
+    functions: 75

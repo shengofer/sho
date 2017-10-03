@@ -1,0 +1,6 @@
+--recursive
+--reporter spec
+--ui bdd
+--slow 100
+--require ./test/mocha.config.js
+./test/unit/**/*.test.js
